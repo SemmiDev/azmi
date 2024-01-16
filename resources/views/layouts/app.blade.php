@@ -8,6 +8,37 @@
 
     <title>{{ config('app.name', 'Si-Sawa') }}</title>
 
+    {{-- <style>
+        .laravel-embed__responsive-wrapper {
+            position: relative;
+            /* height: 150px; */
+            max-height: 20px;
+            overflow: hidden;
+            max-width: 50%;
+            margin: auto;
+            border-radius: 20px;
+            /* // aspect ratio */
+
+
+
+
+
+
+        }
+
+        .laravel-embed__fallback,
+        .laravel-embed__responsive-wrapper iframe,
+        .laravel-embed__responsive-wrapper object,
+        .laravel-embed__responsive-wrapper embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style> --}}
+
+
     <!-- Styles -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');

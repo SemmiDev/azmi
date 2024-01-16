@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('tembang_dolanan', function (Blueprint $table) {
             $table->id();
+            $table->text('background')->nullable(); // image path storage
+            $table->text('title')->nullable();
+            $table->text('description')->nullable();
+            $table->text('lyric')->nullable();
+            $table->text('video')->nullable(); // link youtube
             $table->timestamps();
         });
     }
