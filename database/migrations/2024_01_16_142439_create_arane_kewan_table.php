@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('arane_kewan', function (Blueprint $table) {
             $table->id();
+            $table->text('background')->nullable(); // image path storage
+            $table->text('title')->nullable();
+            $table->text('description')->nullable();
+            $table->text('voice')->nullable(); // file/voice mp3 path storage
             $table->timestamps();
         });
     }

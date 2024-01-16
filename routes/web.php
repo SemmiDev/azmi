@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AraneKewanController;
 use App\Http\Controllers\DongengController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TembangDolananController;
@@ -46,12 +47,20 @@ Route::patch('/dongeng/{dongeng}', [DongengController::class, 'update'])->name('
 Route::delete('/dongeng/{dongeng}', [DongengController::class, 'destroy'])->name('dongeng.destroy');
 
 
-Route::get('/tembang-dolanan', [TembangDolananController::class, 'index'])->name('tembang_dolanan.index');
+Route::get('/tembang_dolanan', [TembangDolananController::class, 'index'])->name('tembang_dolanan.index');
 Route::get('/tembang_dolanan/create', [TembangDolananController::class, 'create'])->name('tembang_dolanan.create');
 Route::post('/tembang_dolanan', [TembangDolananController::class, 'store'])->name('tembang_dolanan.store');
 Route::get('/tembang_dolanan/{tembang}', [TembangDolananController::class, 'show'])->name('tembang_dolanan.show');
 Route::get('/tembang_dolanan/{tembang}/edit', [TembangDolananController::class, 'edit'])->name('tembang_dolanan.edit');
 Route::patch('/tembang_dolanan/{tembang}', [TembangDolananController::class, 'update'])->name('tembang_dolanan.update');
 Route::delete('/tembang_dolanan/{tembang}', [TembangDolananController::class, 'destroy'])->name('tembang_dolanan.destroy');
+
+Route::get('/arane_kewan', [AraneKewanController::class, 'index'])->name('arane_kewan.index');
+Route::get('/arane_kewan/create', [AraneKewanController::class, 'create'])->name('arane_kewan.create');
+Route::post('/arane_kewan', [AraneKewanController::class, 'store'])->name('arane_kewan.store');
+Route::get('/arane_kewan/{araneKewan}', [AraneKewanController::class, 'show'])->name('arane_kewan.show');
+Route::get('/arane_kewan/{araneKewan}/edit', [AraneKewanController::class, 'edit'])->name('arane_kewan.edit');
+Route::patch('/arane_kewan/{araneKewan}', [AraneKewanController::class, 'update'])->name('arane_kewan.update');
+Route::delete('/arane_kewan/{araneKewan}', [AraneKewanController::class, 'destroy'])->name('arane_kewan.destroy');
 
 require __DIR__.'/auth.php';
