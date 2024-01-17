@@ -2,8 +2,11 @@
 
 use App\Http\Controllers\AraneKewanController;
 use App\Http\Controllers\DongengController;
+use App\Http\Controllers\DongengGameController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\StartDongengGameController;
 use App\Http\Controllers\TembangDolananController;
+use App\Http\Controllers\UngahUnguhBasaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -62,5 +65,24 @@ Route::get('/arane_kewan/{araneKewan}', [AraneKewanController::class, 'show'])->
 Route::get('/arane_kewan/{araneKewan}/edit', [AraneKewanController::class, 'edit'])->name('arane_kewan.edit');
 Route::patch('/arane_kewan/{araneKewan}', [AraneKewanController::class, 'update'])->name('arane_kewan.update');
 Route::delete('/arane_kewan/{araneKewan}', [AraneKewanController::class, 'destroy'])->name('arane_kewan.destroy');
+
+
+Route::get('/ungah_unguh_basa', [UngahUnguhBasaController::class, 'index'])->name('ungah_unguh_basa.index');
+Route::get('/ungah_unguh_basa/create', [UngahUnguhBasaController::class, 'create'])->name('ungah_unguh_basa.create');
+Route::post('/ungah_unguh_basa', [UngahUnguhBasaController::class, 'store'])->name('ungah_unguh_basa.store');
+Route::get('/ungah_unguh_basa/{ungahUnguhBasa}', [UngahUnguhBasaController::class, 'show'])->name('ungah_unguh_basa.show');
+Route::get('/ungah_unguh_basa/{ungahUnguhBasa}/edit', [UngahUnguhBasaController::class, 'edit'])->name('ungah_unguh_basa.edit');
+Route::patch('/ungah_unguh_basa/{ungahUnguhBasa}', [UngahUnguhBasaController::class, 'update'])->name('ungah_unguh_basa.update');
+Route::delete('/ungah_unguh_basa/{ungahUnguhBasa}', [UngahUnguhBasaController::class, 'destroy'])->name('ungah_unguh_basa.destroy');
+
+
+Route::get('/dongeng_game/{dongeng}', [DongengGameController::class, 'index'])->name('dongeng_game.index');
+Route::get('/dongeng_game/{dongeng}/create', [DongengGameController::class, 'create'])->name('dongeng_game.create');
+Route::post('/dongeng_game/{dongeng}/store', [DongengGameController::class, 'store'])->name('dongeng_game.store');
+Route::delete('/dongeng_game/{dongengGame}', [DongengGameController::class, 'destroy'])->name('dongeng_game.destroy');
+
+Route::get('/start_dongeng_game/{dongeng}/material', [StartDongengGameController::class, 'material'])->name('start_dongeng_game.material');
+Route::get('/start_dongeng_game/{dongeng}/play', [StartDongengGameController::class, 'play'])->name('start_dongeng_game.play');
+Route::post('/start_dongeng_game/{dongeng}/check', [StartDongengGameController::class, 'check'])->name('start_dongeng_game.check');
 
 require __DIR__.'/auth.php';

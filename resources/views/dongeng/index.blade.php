@@ -16,6 +16,7 @@
         <table class="min-w-full border border-gray-300 rounded-md">
             <thead>
                 <tr>
+                    <th class="py-2 px-4 border-b">Gambar</th>
                     <th class="py-2 px-4 border-b">Judul</th>
                     <th class="py-2 px-4 border-b">Deskripsi</th>
                     <th class="py-2 px-4 border-b">Aksi</th>
@@ -24,10 +25,18 @@
             <tbody>
                 @forelse ($dongengs as $dongeng)
                     <tr>
-                        <td class="py-2 px-4 text-center border-b">{{ $dongeng->title }}</td>
-                        <td class="py-2 px-4 text-center border-b">{{ $dongeng->description }}</td>
-                        <td class="py-2 px-4 text-center  border-b">
+                        <td class="py-2 px-4 text-center border-b">
+                            <img src="{{ asset('storage/' . $dongeng->background) }}" alt="{{ $dongeng->title }}"
+                                class="w-full max-w-sm h-32 object-cover rounded-2xl">
+                        </td>
+                        <td class="py-2 px-4 text-start max-w-xs  border-b">{{ $dongeng->title }}</td>
+                        <td class="py-2 px-4 text-start max-w-xs border-b">{{ $dongeng->description }}</td>
+                        <td class="py-2 px-4 text-center border-b">
                             <div class="space-x-2 flex justify-center">
+                                <a href="{{ route('start_dongeng_game.material', ['dongeng' => $dongeng]) }}"
+                                    class="bg-gradient-to-r from-pink-500 to-pink-500 text-white px-4 py-2 rounded-md">Materi</a>
+                                <a href="{{ route('dongeng_game.index', ['dongeng' => $dongeng]) }}"
+                                    class="bg-gradient-to-r from-sky-500 to-blue-500 text-white px-4 py-2 rounded-md">Kelola Pertanyaan & Jawaban</a>
                                 <a href="{{ route('dongeng.show', $dongeng->id) }}"
                                     class="bg-gradient-to-r from-green-500 to-sky-500 text-white px-4 py-2 rounded-md">Detail</a>
                                 <a href="{{ route('dongeng.edit', $dongeng->id) }}"

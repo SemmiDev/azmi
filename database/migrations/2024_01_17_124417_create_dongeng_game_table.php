@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ungah_unguh_basa', function (Blueprint $table) {
+        Schema::create('dongeng_game', function (Blueprint $table) {
             $table->id();
-            $table->text('title')->nullable();
-            $table->text('description')->nullable();
-            $table->text('text')->nullable();
-            $table->text('video')->nullable(); // link youtube
+            $table->foreignId('dongeng_id')->constrained('dongeng')->onDelete('cascade');
+            $table->text('question');
+            $table->text('answer');
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ungah_unguh_basa');
+        Schema::dropIfExists('dongeng_game');
     }
 };

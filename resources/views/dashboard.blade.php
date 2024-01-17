@@ -14,8 +14,13 @@
                     <img src="/tembang-dolanan.png" alt="Image 1" class="mb-4 rounded-md">
                     <h3 class="text-xl font-semibold text-white mb-2">Tembang Dolanan</h3>
                     <div class="flex justify-between">
-                        <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md">Materi</a>
+                        <a href="#"
+                            class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md">Materi</a>
                         <a href="#" class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-md">Game</a>
+                        @if (Auth::user()->role == 'guru')
+                            <a href="{{route('tembang_dolanan.index')}}"
+                                class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-md">Kelola</a>
+                        @endif
                     </div>
                 </div>
 
@@ -24,8 +29,13 @@
                     <img src="/arane-kewan.png" alt="Image 2" class="mb-4 rounded-md">
                     <h3 class="text-xl font-semibold text-white mb-2">Arane Kawen</h3>
                     <div class="flex justify-between">
-                        <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md">Materi</a>
+                        <a href="#"
+                            class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md">Materi</a>
                         <a href="#" class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-md">Game</a>
+                        @if (Auth::user()->role == 'guru')
+                            <a href="{{route('arane_kewan.index')}}"
+                                class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-md">Kelola</a>
+                        @endif
                     </div>
                 </div>
 
@@ -34,8 +44,13 @@
                     <img src="/unguh-unguh-basa.png" alt="Image 3" class="mb-4 rounded-md">
                     <h3 class="text-xl font-semibold text-white mb-2">Ungah-Unguh Basa</h3>
                     <div class="flex justify-between">
-                        <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md">Materi</a>
+                        <a href="#"
+                            class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md">Materi</a>
                         <a href="#" class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-md">Game</a>
+                        @if (Auth::user()->role == 'guru')
+                            <a href="{{route('ungah_unguh_basa.index')}}"
+                                class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-md">Kelola</a>
+                        @endif
                     </div>
                 </div>
 
@@ -44,8 +59,13 @@
                     <img src="/dongeng.png" alt="Image 4" class="mb-4 rounded-md">
                     <h3 class="text-xl font-semibold text-white mb-2">Dongeng</h3>
                     <div class="flex justify-between">
-                        <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md">Materi</a>
+                        <a href="#"
+                            class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md">Materi</a>
                         <a href="#" class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-md">Game</a>
+                        @if (Auth::user()->role == 'guru')
+                            <a href="{{route('dongeng.index')}}"
+                                class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-md">Kelola</a>
+                        @endif
                     </div>
                 </div>
             </div>
