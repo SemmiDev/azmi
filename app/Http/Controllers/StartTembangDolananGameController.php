@@ -110,7 +110,7 @@ class StartTembangDolananGameController extends Controller
 
         foreach ($questions as $index => $question) {
             if ($index == $indexQuestion) {
-                $question['current']['answer'] = $currentAnswer;
+                $question['answer'] = $currentAnswer;
                 $questions[$index] = $question;
                 session(['tembang_dolanan_questions' => $questions]);
             }
@@ -123,6 +123,45 @@ class StartTembangDolananGameController extends Controller
                 'index' => $indexQuestion,
                 'answer' => $currentAnswer,
             ],
+        ]);
+    }
+
+    public function check() {
+        $questions = session('tembang_dolanan_questions');
+        $summary = [];
+
+        foreach ($questions as $question) {
+            $opt = $question['current']['options'];
+            $keyAnswer = $question['current']['answer'];
+            $answer = $question['answer'];
+
+            if ($keyAnswer == $opt[$answer]) {
+                $question['current']['status'] = 'correct';
+            } else {
+                $question['current']['status'] = 'incorrect';
+            }
+
+            $summary[] = $question['current'];
+        }
+
+        // remove session
+        // session()->forget('tembang_dolanan_questions');
+
+    // [
+        // [
+    //     "id" => 13
+    //   "tembang_dolanan_id" => 1
+    //   "question" => "Siapa Nama Kamu?"
+    //   "answer" => "Sammi"
+    //   "options" => array:5 [▶]
+    //   "created_at" => "2024-01-20 10:22:34"
+    //   "updated_at" => "2024-01-20 10:22:34"
+    //   "status" => "correct" // or incorrect
+        // ]
+    // ]
+
+        return view('start_tembang_dolanan_game.summary', [
+            'questions' => $summary,
         ]);
     }
 }
