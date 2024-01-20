@@ -27,8 +27,10 @@
                         <td class="py-2 px-4 text-center border-b">{{ $tembang->description }}</td>
                         <td class="py-2 px-4 text-center  border-b">
                             <div class="space-x-2 flex justify-center">
-                                <a href="{{ route('ungah_unguh_basa.edit', $tembang->id) }}"
-                                    class="bg-gradient-to-r from-sky-500 to-blue-500 text-white px-4 py-2 rounded-md">Kelola Permainan</a>
+                                <a href="{{ route('start_tembang_dolanan_game.material', ['tembangDolanan' => $tembang]) }}"
+                                    class="bg-gradient-to-r from-pink-500 to-pink-500 text-white px-4 py-2 rounded-md">Materi</a>
+                                <a href="{{ route('tembang_dolanan_game.index', ['tembangDolanan' => $tembang]) }}"
+                                    class="bg-gradient-to-r from-sky-500 to-blue-500 text-white px-4 py-2 rounded-md">Kelola Pertanyaan & Jawaban</a>
                                 <a href="{{ route('tembang_dolanan.show', $tembang->id) }}"
                                     class="bg-gradient-to-r from-green-500 to-sky-500 text-white px-4 py-2 rounded-md">Detail</a>
                                 <a href="{{ route('tembang_dolanan.edit', $tembang->id) }}"
