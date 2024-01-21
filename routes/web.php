@@ -4,6 +4,7 @@ use App\Http\Controllers\AraneKewanController;
 use App\Http\Controllers\DongengController;
 use App\Http\Controllers\DongengGameController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\StartAraneKewanController;
 use App\Http\Controllers\StartDongengGameController;
 use App\Http\Controllers\StartTembangDolananGameController;
 use App\Http\Controllers\TembangDolananController;
@@ -100,5 +101,10 @@ Route::get('/start_tembang_dolanan_game/{tembangDolanan}/play', [StartTembangDol
 Route::get('/start_tembang_dolanan_game/{tembangDolanan}/getQuestion', [StartTembangDolananGameController::class, 'getQuestion'])->name('start_tembang_dolanan_game.getQuestion');
 Route::post('/start_tembang_dolanan_game/setAnswer', [StartTembangDolananGameController::class, 'setAnswer'])->name('start_tembang_dolanan_game.setAnswer');
 Route::post('/start_tembang_dolanan_game/{tembangDolanan}/check', [StartTembangDolananGameController::class, 'check'])->name('start_tembang_dolanan_game.check');
+
+Route::get('/start_arane_kewan_game/material', [StartAraneKewanController::class, 'material'])->name('start_arane_kewan_game.material');
+Route::get('/start_arane_kewan_game/play', [StartAraneKewanController::class, 'play'])->name('start_arane_kewan_game.play');
+Route::get('/start_arane_kewan_game/play2', [StartAraneKewanController::class, 'play2'])->name('start_arane_kewan_game.play2');
+
 
 require __DIR__.'/auth.php';
