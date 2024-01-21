@@ -10,6 +10,9 @@ use App\Http\Controllers\StartTembangDolananGameController;
 use App\Http\Controllers\TembangDolananController;
 use App\Http\Controllers\TembangDolananGameController;
 use App\Http\Controllers\UngahUnguhBasaController;
+use App\Models\AraneKewan;
+use App\Models\Dongeng;
+use App\Models\TembangDolanan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -106,5 +109,17 @@ Route::get('/start_arane_kewan_game/material', [StartAraneKewanController::class
 Route::get('/start_arane_kewan_game/play', [StartAraneKewanController::class, 'play'])->name('start_arane_kewan_game.play');
 Route::get('/start_arane_kewan_game/play2', [StartAraneKewanController::class, 'play2'])->name('start_arane_kewan_game.play2');
 
+
+// student game menu
+
+Route::get('student/dongeng/games', function() {
+    $dongengs = Dongeng::all();
+    return view('dongeng.games', compact('dongengs'));
+})->name('dongeng.games');
+
+Route::get('student/tembang_dolanan/games', function() {
+    $tembangs = TembangDolanan::all();
+    return view('tembang_dolanan.games', compact('tembangs'));
+})->name('tembang_dolanan.games');
 
 require __DIR__.'/auth.php';
