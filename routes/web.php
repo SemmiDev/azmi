@@ -10,6 +10,7 @@ use App\Http\Controllers\StartTembangDolananGameController;
 use App\Http\Controllers\TembangDolananController;
 use App\Http\Controllers\TembangDolananGameController;
 use App\Http\Controllers\UngahUnguhBasaController;
+use App\Http\Controllers\UngahUnguhBasaGameController;
 use App\Models\AraneKewan;
 use App\Models\Dongeng;
 use App\Models\TembangDolanan;
@@ -79,7 +80,12 @@ Route::post('/ungah_unguh_basa', [UngahUnguhBasaController::class, 'store'])->na
 Route::get('/ungah_unguh_basa/{ungahUnguhBasa}', [UngahUnguhBasaController::class, 'show'])->name('ungah_unguh_basa.show');
 Route::get('/ungah_unguh_basa/{ungahUnguhBasa}/edit', [UngahUnguhBasaController::class, 'edit'])->name('ungah_unguh_basa.edit');
 Route::patch('/ungah_unguh_basa/{ungahUnguhBasa}', [UngahUnguhBasaController::class, 'update'])->name('ungah_unguh_basa.update');
-Route::delete('/ungah_unguh_basa/{ungahUnguhBasa}', [UngahUnguhBasaController::class, 'destroy'])->name('ungah_unguh_basa.destroy');
+Route::delete('/ungah_unguh_basa/{ungahUnguhBasa}/destroy', [UngahUnguhBasaController::class, 'destroy'])->name('ungah_unguh_basa.destroy');
+
+Route::get('/ungah_unguh_basa_game/{ungahUnguhBasa}', [UngahUnguhBasaGameController::class, 'index'])->name('ungah_unguh_basa_game.index');
+Route::get('/ungah_unguh_basa_game/{ungahUnguhBasa}/create', [UngahUnguhBasaGameController::class, 'create'])->name('ungah_unguh_basa_game.create');
+Route::post('/ungah_unguh_basa_game/{ungahUnguhBasa}/store', [UngahUnguhBasaGameController::class, 'store'])->name('ungah_unguh_basa_game.store');
+Route::delete('/ungah_unguh_basa_game/{ungahUnguhBasaGame}/destroy', [UngahUnguhBasaGameController::class, 'destroy'])->name('ungah_unguh_basa_game.destroy');
 
 Route::get('/dongeng_game/{dongeng}', [DongengGameController::class, 'index'])->name('dongeng_game.index');
 Route::get('/dongeng_game/{dongeng}/create', [DongengGameController::class, 'create'])->name('dongeng_game.create');
@@ -98,7 +104,6 @@ Route::get('/tembang_dolanan_game/{game}/edit/{tembangDolanan}', [TembangDolanan
 Route::patch('/tembang_dolanan_game/{game}/update/{tembangDolanan}', [TembangDolananGameController::class, 'update'])->name('tembang_dolanan_game.update');
 Route::delete('/tembang_dolanan_game/{game}/destroy', [TembangDolananGameController::class, 'destroy'])->name('tembang_dolanan_game.destroy');
 
-
 Route::get('/start_tembang_dolanan_game/{tembangDolanan}/material', [StartTembangDolananGameController::class, 'material'])->name('start_tembang_dolanan_game.material');
 Route::get('/start_tembang_dolanan_game/{tembangDolanan}/play', [StartTembangDolananGameController::class, 'play'])->name('start_tembang_dolanan_game.play');
 Route::get('/start_tembang_dolanan_game/{tembangDolanan}/getQuestion', [StartTembangDolananGameController::class, 'getQuestion'])->name('start_tembang_dolanan_game.getQuestion');
@@ -108,7 +113,6 @@ Route::post('/start_tembang_dolanan_game/{tembangDolanan}/check', [StartTembangD
 Route::get('/start_arane_kewan_game/material', [StartAraneKewanController::class, 'material'])->name('start_arane_kewan_game.material');
 Route::get('/start_arane_kewan_game/play', [StartAraneKewanController::class, 'play'])->name('start_arane_kewan_game.play');
 Route::get('/start_arane_kewan_game/play2', [StartAraneKewanController::class, 'play2'])->name('start_arane_kewan_game.play2');
-
 
 // student game menu
 

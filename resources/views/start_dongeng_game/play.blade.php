@@ -1,12 +1,10 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="flex justify-between items-center">
-
             <h2 class="font-semibold text-xl leading-tight text-gray-600">
                 {{ __('Game Board - ' . $dongeng->title) }}
             </h2>
             <h1 id="score" class="text-2xl font-semibold text-gray-600">Score: 0
-
             </h1>
         </div>
     </x-slot>
@@ -73,7 +71,7 @@
             </div>
 
             <div class="mt-6 flex justify-center">
-                <button type="submit" class="px-5 py-3 bg-blue-500 text-white rounded-md">Kirimkan Jawaban</button>
+                <button type="submit" class="px-5 py-3 bg-sky-500 text-white rounded-md">Kirimkan Jawaban</button>
             </div>
         </form>
     </div>

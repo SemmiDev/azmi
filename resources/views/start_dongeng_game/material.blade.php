@@ -6,7 +6,7 @@
 
         <div class="flex justify-center mb-4">
             <div>
-                <a href="{{ route('start_dongeng_game.play', ['dongeng' => $dongeng]) }}" class="px-4 py-2 flex gap-2 bg-blue-500 text-white rounded-md">
+                <a href="{{ route('start_dongeng_game.play', ['dongeng' => $dongeng]) }}" class="px-4 py-2 flex gap-2 bg-sky-500 text-white rounded-md">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"

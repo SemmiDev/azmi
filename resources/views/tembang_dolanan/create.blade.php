@@ -39,7 +39,7 @@
             </div>
 
             <div class="mt-6">
-                <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md">Simpan</button>
+                <button type="submit" class="px-4 py-2 bg-sky-500 text-white rounded-md">Simpan</button>
                 <a href="{{ route('tembang_dolanan.index') }}"
                     class="ml-2 px-4 py-2 bg-gray-300 text-gray-700 rounded-md">Batal</a>
             </div>

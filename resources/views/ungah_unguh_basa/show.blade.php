@@ -10,7 +10,7 @@
             <h1 class="text-2xl font-bold mb-4">{{ $ungahUnguhBasa->title }}</h1>
             <div>
                 <a href="{{ route('ungah_unguh_basa.index') }}"
-                    class="px-4 py-2 bg-blue-500 text-white rounded-md">Kembali</a>
+                    class="px-4 py-2 bg-sky-500 text-white rounded-md">Kembali</a>
             </div>
         </div>
 

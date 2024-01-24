@@ -8,7 +8,7 @@
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-col gap-3">
                 @foreach ($tembangs as $dongeng)
-                    <div class="bg-blue-800 flex gap-12 from-blue-300 to-green-300 p-6 rounded-lg shadow-md">
+                    <div class="bg-sky-400 flex gap-12 from-blue-300 to-green-300 p-6 rounded-lg shadow-md">
                         <img src="{{ asset('storage/' . $dongeng->background) }}" alt="{{ $dongeng->title }}"
                             class="mb-4 h-56 rounded-md">
                         <div class="flex flex-col justify-between">

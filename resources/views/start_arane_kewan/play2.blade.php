@@ -32,7 +32,7 @@
         <div id="pilihan-atas" class="px-4 py-3 text-xl flex gap-2 bg-yellow-500 text-white rounded-md">
             {{-- pilihan atas --}}
         </div>
-        <div id="pilihan-bawah" class="px-4 py-3 text-xl mr-12 flex gap-2 bg-blue-500 text-white rounded-md">
+        <div id="pilihan-bawah" class="px-4 py-3 text-xl mr-12 flex gap-2 bg-sky-500 text-white rounded-md">
             {{-- pilihan bawah --}}
         </div>
 

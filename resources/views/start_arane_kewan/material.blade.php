@@ -13,7 +13,7 @@
     <div class="container mx-auto mt-8 p-5 rounded-xl bg-gradient-to-r from-sky-100 to-pink-200 shadow-md">
         <div class="flex justify-center mb-4">
             <div>
-                <a href="{{ route('start_arane_kewan_game.play') }}" class="px-4 py-2 flex gap-2 bg-blue-500 text-white rounded-md">
+                <a href="{{ route('start_arane_kewan_game.play') }}" class="px-4 py-2 flex gap-2 bg-sky-500 text-white rounded-md">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"

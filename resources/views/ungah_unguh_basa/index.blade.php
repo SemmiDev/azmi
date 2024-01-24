@@ -28,8 +28,8 @@
                         <td class="py-2 px-4 text-center border-b">{{ $ungahUnguhBasa->description }}</td>
                         <td class="py-2 px-4 text-center  border-b">
                             <div class="space-x-2 flex justify-center">
-                                <a href="{{ route('ungah_unguh_basa.edit', $ungahUnguhBasa->id) }}"
-                                    class="bg-gradient-to-r from-sky-500 to-blue-500 text-white px-4 py-2 rounded-md">Kelola Permainan</a>
+                                <a href="{{ route('ungah_unguh_basa_game.index', $ungahUnguhBasa->id) }}"
+                                    class="bg-gradient-to-r from-sky-500 to-blue-500 text-white px-4 py-2 rounded-md">Kelola Pertanyaan & Jawaban</a>
                                 <a href="{{ route('ungah_unguh_basa.show', $ungahUnguhBasa->id) }}"
                                     class="bg-gradient-to-r from-green-500 to-sky-500 text-white px-4 py-2 rounded-md">Detail</a>
                                 <a href="{{ route('ungah_unguh_basa.edit', $ungahUnguhBasa->id) }}"
