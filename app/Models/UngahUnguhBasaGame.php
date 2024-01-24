@@ -14,6 +14,9 @@ use Illuminate\Database\Eloquent\Model;
  * 
  * @property int $id
  * @property int $ungah_unguh_basa_id
+ * @property string $question
+ * @property string $image1
+ * @property string $image2
  * @property string $answer1
  * @property string $answer2
  * @property string $options
@@ -34,6 +37,9 @@ class UngahUnguhBasaGame extends Model
 
 	protected $fillable = [
 		'ungah_unguh_basa_id',
+		'question',
+		'image1',
+		'image2',
 		'answer1',
 		'answer2',
 		'options'

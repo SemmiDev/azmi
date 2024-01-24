@@ -12,6 +12,16 @@
             @csrf
 
             <div class="mb-4">
+                <label for="question" class="block text-sm font-medium text-gray-600">Pertanyaan</label>
+                <textarea name="question" placeholder="Apa pertanyaan yang ingin kamu tanyakan?" id="question" cols="30" rows="3"
+                required
+                class="mt-1 p-2 border rounded-md w-full @error('question') border-red-500 @enderror">{{ old('question') }}</textarea>
+                @error('question')
+                    <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <div class="mb-4">
                 <label for="answer1" class="block text-sm font-medium text-gray-600">Jawaban Karakter 1</label>
                 <textarea name="answer1" placeholder="Apa jawaban dari pertanyaan di atas?" id="answer1" cols="30" rows="3"
                 required

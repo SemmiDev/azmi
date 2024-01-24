@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\UngahUnguhBasa;
 use App\Models\UngahUnguhBasaGame;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class UngahUnguhBasaGameController extends Controller
 {
@@ -34,6 +33,7 @@ class UngahUnguhBasaGameController extends Controller
     public function store(Request $request, UngahUnguhBasa $ungahUnguhBasa)
     {
         $request->validate([
+            'question' => 'required',
             'answer1' => 'required',
             'answer2' => 'required',
             'image1' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
@@ -50,6 +50,7 @@ class UngahUnguhBasaGameController extends Controller
 
         // Save the data to the database
         UngahUnguhBasaGame::create([
+            'question' => $request->input('question'),
             'ungah_unguh_basa_id' => $ungahUnguhBasa->id,
             'answer1' => $request->input('answer1'),
             'answer2' => $request->input('answer2'),

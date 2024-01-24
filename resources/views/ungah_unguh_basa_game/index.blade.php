@@ -18,6 +18,7 @@
         <table class="min-w-full border border-gray-300 rounded-md">
             <thead>
                 <tr>
+                    <th class="py-2 px-4 border-b">Pertanyaan</th>
                     <th class="py-2 px-4 border-b">Jawaban Karakter 1</th>
                     <th class="py-2 px-4 border-b">Jawaban Karakter 2</th>
                     <th class="py-2 px-4 border-b">Options</th>
@@ -27,6 +28,7 @@
             <tbody>
                 @forelse ($ungahUnguhBasaGames as $game)
                     <tr>
+                        <td class="py-2 px-4 text-center border-b">{{ $game->question }}</td>
                         <td class="py-2 px-4 text-center border-b">{{ $game->answer1 }}</td>
                         <td class="py-2 px-4 text-center border-b">{{ $game->answer2 }}</td>
                         <td class="py-2 px-4 border-b">

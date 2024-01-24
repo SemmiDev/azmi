@@ -7,6 +7,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StartAraneKewanController;
 use App\Http\Controllers\StartDongengGameController;
 use App\Http\Controllers\StartTembangDolananGameController;
+use App\Http\Controllers\StartUngahUnguhBasaController;
 use App\Http\Controllers\TembangDolananController;
 use App\Http\Controllers\TembangDolananGameController;
 use App\Http\Controllers\UngahUnguhBasaController;
@@ -14,6 +15,7 @@ use App\Http\Controllers\UngahUnguhBasaGameController;
 use App\Models\AraneKewan;
 use App\Models\Dongeng;
 use App\Models\TembangDolanan;
+use App\Models\UngahUnguhBasa;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -87,6 +89,9 @@ Route::get('/ungah_unguh_basa_game/{ungahUnguhBasa}/create', [UngahUnguhBasaGame
 Route::post('/ungah_unguh_basa_game/{ungahUnguhBasa}/store', [UngahUnguhBasaGameController::class, 'store'])->name('ungah_unguh_basa_game.store');
 Route::delete('/ungah_unguh_basa_game/{ungahUnguhBasaGame}/destroy', [UngahUnguhBasaGameController::class, 'destroy'])->name('ungah_unguh_basa_game.destroy');
 
+Route::get('/start_ungah_unguh_basa_game/{ungahUnguhBasa}/material', [StartUngahUnguhBasaController::class, 'material'])->name('start_ungah_unguh_basa_game.material');
+Route::get('/start_ungah_unguh_basa_game/{ungahUnguhBasa}/play', [StartUngahUnguhBasaController::class, 'play'])->name('start_ungah_unguh_basa_game.play');
+
 Route::get('/dongeng_game/{dongeng}', [DongengGameController::class, 'index'])->name('dongeng_game.index');
 Route::get('/dongeng_game/{dongeng}/create', [DongengGameController::class, 'create'])->name('dongeng_game.create');
 Route::post('/dongeng_game/{dongeng}/store', [DongengGameController::class, 'store'])->name('dongeng_game.store');
@@ -125,5 +130,10 @@ Route::get('student/tembang_dolanan/games', function() {
     $tembangs = TembangDolanan::all();
     return view('tembang_dolanan.games', compact('tembangs'));
 })->name('tembang_dolanan.games');
+
+Route::get('student/ungah_unguh_basa/games', function() {
+    $games = UngahUnguhBasa::all();
+    return view('ungah_unguh_basa.games', compact('games'));
+})->name('ungah_unguh_basa.games');
 
 require __DIR__.'/auth.php';
