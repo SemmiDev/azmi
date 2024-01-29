@@ -4,6 +4,7 @@ use App\Http\Controllers\AraneKewanController;
 use App\Http\Controllers\DongengController;
 use App\Http\Controllers\DongengGameController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\StartAraneKewanController;
 use App\Http\Controllers\StartDongengGameController;
 use App\Http\Controllers\StartTembangDolananGameController;
@@ -135,5 +136,7 @@ Route::get('student/ungah_unguh_basa/games', function() {
     $games = UngahUnguhBasa::all();
     return view('ungah_unguh_basa.games', compact('games'));
 })->name('ungah_unguh_basa.games');
+
+Route::resource('siswa', SiswaController::class);
 
 require __DIR__.'/auth.php';

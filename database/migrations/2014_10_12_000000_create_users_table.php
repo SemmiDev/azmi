@@ -18,6 +18,10 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('no_identitas')->nullable();
+            $table->enum('jenis_kelamin', ['Laki-laki', 'Perempuan'])->nullable();
+            $table->string('alamat')->nullable();
+            $table->integer('umur')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
