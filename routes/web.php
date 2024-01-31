@@ -122,6 +122,10 @@ Route::get('/start_arane_kewan_game/play2', [StartAraneKewanController::class, '
 
 // student game menu
 
+Route::get("/welcome", function () {
+    return view('welcome');
+})->name('welcome');
+
 Route::get('student/dongeng/games', function() {
     $dongengs = Dongeng::all();
     return view('dongeng.games', compact('dongengs'));

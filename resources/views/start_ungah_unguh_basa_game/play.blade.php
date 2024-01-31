@@ -44,9 +44,14 @@
         <form id="gameForm" class="flex flex-col gap-5">
             <h1 class="text-xl font-semibold max-w-3xl mx-auto text-center">{{ $ungahUnguhBasaGameData->question }}</h1>
 
+            @php
+                $choice =  rand(1, 2);
+            @endphp
+
             <div class="flex items-center justify-center gap-5">
                 <div class="w-1/2 flex flex-col gap-5">
                     <input type="text" name="answer1" id="answer1" required placeholder="Masukkan jawaban?"
+                        value="{{ $choice == 1 ? $ungahUnguhBasaGameData->answer1 : '' }}"
                         class="mt-1 p-4 border rounded-md w-72 mx-auto @error('answer1') border-red-500 @enderror">
 
                     <img src="{{ asset('storage/' . $ungahUnguhBasaGameData->image1) }}" alt=""
@@ -55,6 +60,7 @@
 
                 <div class="w-1/2 flex flex-col gap-5">
                     <input type="text" name="answer2" id="answer2" required placeholder="Masukkan jawaban?"
+                        value="{{ $choice == 2 ? $ungahUnguhBasaGameData->answer2 : '' }}"
                         class="mt-1 p-4 border rounded-md w-72 mx-auto @error('answer1') border-red-500 @enderror">
 
                     <img src="{{ asset('storage/' . $ungahUnguhBasaGameData->image2) }}" alt=""

@@ -27,7 +27,7 @@
                 <!-- Card 2 -->
                 <div class="bg-gradient-to-br from-purple-300 to-red-300 p-6 rounded-lg shadow-md">
                     <img src="/arane-kewan.png" alt="Image 2" class="mb-4 rounded-md">
-                    <h3 class="text-xl font-semibold text-white mb-2">Arane Kawen</h3>
+                    <h3 class="text-xl font-semibold text-white mb-2">Arane Kewan</h3>
                     <div class="flex justify-between">
                         {{-- <a href="#"
                             class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md">Materi</a> --}}
