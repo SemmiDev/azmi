@@ -34,7 +34,7 @@
         @endphp
 
         <div class="flex flex-col items-center gap-3">
-            <iframe class="w-full max-w-xl rounded-2xl h-72" src="{{ 'https://www.youtube.com/embed/' . $video }}"
+            <iframe class="w-full max-w-5xl rounded-2xl h-96" src="{{ 'https://www.youtube.com/embed/' . $video }}"
                 frameborder="2" allowfullscreen>
             </iframe>
 

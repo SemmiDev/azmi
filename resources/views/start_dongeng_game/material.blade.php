@@ -19,7 +19,7 @@
 
         <div class="flex flex-col items-center gap-3">
             <img src="{{ asset('storage/' . $dongeng->background) }}" alt="{{ $dongeng->title }}"
-                class="w-full max-w-xl mx-auto rounded-2xl h-96">
+                class="w-full max-w-5xl rounded-2xl object-cover h-96">
             <audio controls>
                 <source src="{{ asset('storage/' . $dongeng->voice) }}" type="audio/mp3">
                 Your browser does not support the audio element.

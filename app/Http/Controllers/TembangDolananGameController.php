@@ -9,6 +9,16 @@ use Illuminate\Support\Facades\DB;
 
 class TembangDolananGameController extends Controller
 {
+    public function search(Request $request)
+    {
+        $keyword = $request->input('keyword');
+        $searchResults = TembangDolanan::where('title', 'like', '%' . $keyword . '%')
+            ->orWhere('description', 'like', '%' . $keyword . '%')
+            ->get();
+
+        return response()->json($searchResults);
+    }
+
     public function index(TembangDolanan $tembangDolanan)
     {
         $games = TembangDolananGame::where('tembang_dolanan_id', $tembangDolanan->id)->get();

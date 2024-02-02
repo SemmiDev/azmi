@@ -63,18 +63,18 @@
         </h1>
     </div>
 
-    <div class="carousel max-w-3xl">
+    <div class="carousel max-w-6xl">
         <div id="item1" class="carousel-item w-full">
             <img src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
-                class="w-full h-[520px] object-cover rounded-xl" />
+                class="w-full h-[600px] object-cover rounded-xl" />
         </div>
         <div id="item2" class="carousel-item w-full">
             <img src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg"
-                class="w-full h-[520px] object-cover rounded-xl" />
+                class="w-full h-[600px] object-cover rounded-xl" />
         </div>
         <div id="item3" class="carousel-item w-full">
             <img src="https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg"
-                class="w-full  h-[520px] object-cover rounded-xl" />
+                class="w-full  h-[600px] object-cover rounded-xl" />
         </div>
     </div>
     <div class="flex justify-center w-full py-2 gap-2">

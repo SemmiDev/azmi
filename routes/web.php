@@ -143,4 +143,8 @@ Route::get('student/ungah_unguh_basa/games', function() {
 
 Route::resource('siswa', SiswaController::class);
 
+Route::get('/search/dongeng', [DongengGameController::class, 'search'])->name('dongeng.search');
+Route::get('search/ungah-unguh-basa', [UngahUnguhBasaGameController::class, 'search'])->name('ungah_unguh_basa.games.search');
+Route::get('search/tembang-dolanan', [TembangDolananGameController::class, 'search'])->name('tembang_dolanan.games.search');
+
 require __DIR__.'/auth.php';

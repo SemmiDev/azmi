@@ -17,6 +17,14 @@ class DongengGameController extends Controller
         ]);
     }
 
+    public function search(Request $request)
+    {
+        $keyword = $request->input('keyword');
+        $searchResults = Dongeng::where('title', 'like', '%' . $keyword . '%')->get();
+
+        return response()->json($searchResults);
+    }
+
     public function create(Dongeng $dongeng)
     {
         return view('dongeng_game.create', [

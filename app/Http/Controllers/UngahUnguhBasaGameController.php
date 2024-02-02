@@ -8,6 +8,13 @@ use Illuminate\Http\Request;
 
 class UngahUnguhBasaGameController extends Controller
 {
+    public function search(Request $request)
+    {
+        $keyword = $request->input('keyword');
+        $searchResults = UngahUnguhBasa::where('title', 'like', '%' . $keyword . '%')->get();
+
+        return response()->json($searchResults);
+    }
 
     public function index(UngahUnguhBasa $ungahUnguhBasa)
     {
