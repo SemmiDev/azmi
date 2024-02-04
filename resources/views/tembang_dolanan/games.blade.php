@@ -26,7 +26,7 @@
                 @foreach ($tembangs as $tembang)
                     <div class="bg-sky-400 flex gap-12 from-blue-300 to-green-300 p-6 rounded-lg shadow-md">
                         <img src="{{ asset('storage/' . $tembang->background) }}" alt="{{ $tembang->title }}"
-                            class="mb-4 h-56 rounded-md">
+                        class="mb-4 w-96 object-cover h-56 rounded-md">
                         <div class="flex flex-col justify-between">
                             <div>
                                 <h3 class="text-4xl font-semibold text-white mb-2">{{ $tembang->title }}</h3>
